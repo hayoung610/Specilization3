@@ -1,0 +1,231 @@
+EESchema Schematic File Version 4
+LIBS:1-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title "ProjectECE_Temperature"
+Date "2019-12-28"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	4650 3050 4350 3050
+$Comp
+L Device:C C404
+U 1 1 5DB40D12
+P 4350 3350
+F 0 "C404" H 4465 3396 50  0000 L CNN
+F 1 "10n" H 4465 3305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4388 3200 50  0001 C CNN
+F 3 "~" H 4350 3350 50  0001 C CNN
+	1    4350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 3200 4350 3050
+Connection ~ 4350 3050
+Wire Wire Line
+	4350 3050 4100 3050
+Wire Wire Line
+	4350 3500 4350 3700
+Text HLabel 4100 3050 0    50   Input ~ 0
+Ref_0
+Text HLabel 4350 3700 3    50   Input ~ 0
+AGnd
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 5DB41CE4
+P 6650 3550
+F 0 "J1" H 6700 3867 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 6700 3776 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 6650 3550 50  0001 C CNN
+F 3 "~" H 6650 3550 50  0001 C CNN
+	1    6650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3450 6450 3450
+Wire Wire Line
+	5850 3550 6450 3550
+Wire Wire Line
+	5850 4550 6150 4550
+Wire Wire Line
+	6150 4550 6150 3650
+Wire Wire Line
+	6150 3650 6450 3650
+Wire Wire Line
+	5850 3350 6050 3350
+Wire Wire Line
+	6050 3350 6050 3850
+Wire Wire Line
+	6050 3850 7050 3850
+Wire Wire Line
+	7050 3850 7050 3550
+Wire Wire Line
+	7050 3550 6950 3550
+Wire Wire Line
+	5850 4750 7100 4750
+Wire Wire Line
+	7100 4850 5850 4850
+$Comp
+L Device:C C403
+U 1 1 5DB45A25
+P 5700 2450
+F 0 "C403" V 5448 2450 50  0000 C CNN
+F 1 "100n" V 5539 2450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5738 2300 50  0001 C CNN
+F 3 "~" H 5700 2450 50  0001 C CNN
+	1    5700 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C402
+U 1 1 5DB46575
+P 5700 2000
+F 0 "C402" V 5448 2000 50  0000 C CNN
+F 1 "100n" V 5539 2000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5738 1850 50  0001 C CNN
+F 3 "~" H 5700 2000 50  0001 C CNN
+	1    5700 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C401
+U 1 1 5DB46CCD
+P 5700 1500
+F 0 "C401" V 5952 1500 50  0000 C CNN
+F 1 "1u" V 5861 1500 50  0000 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 5700 1500 50  0001 C CNN
+F 3 "~" H 5700 1500 50  0001 C CNN
+	1    5700 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5350 2750 5350 2450
+Wire Wire Line
+	5350 2450 5550 2450
+Wire Wire Line
+	5250 2750 5250 2000
+Wire Wire Line
+	5250 1500 5550 1500
+Wire Wire Line
+	5850 1500 6150 1500
+Wire Wire Line
+	6150 1500 6150 1700
+Wire Wire Line
+	6150 2000 5850 2000
+$Comp
+L atmega48pv-10pu:ATmega328P-PU U401
+U 1 1 5DB9B093
+P 5250 4250
+F 0 "U401" H 4606 4296 50  0000 R CNN
+F 1 "ATmega328P-PU" H 4606 4205 50  0000 R CNN
+F 2 "Package_DIP:DIP-28_W7.62mm" H 5250 4250 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 5250 4250 50  0001 C CNN
+	1    5250 4250
+	1    0    0    -1  
+$EndComp
+Text HLabel 7100 4750 2    50   Input ~ 0
+RXD
+Text HLabel 7100 4850 2    50   Output ~ 0
+TXD
+Wire Wire Line
+	5850 3950 7150 3950
+Text HLabel 7150 3950 2    50   Input ~ 0
+ADC_In
+Text HLabel 7100 3650 2    50   Input ~ 0
+DGnd
+Text HLabel 7100 3450 2    50   Input ~ 0
++5V_D
+Wire Wire Line
+	5850 2450 7000 2450
+Text HLabel 7000 2450 2    50   Input ~ 0
+AGnd
+Wire Wire Line
+	6150 1700 6500 1700
+Connection ~ 6150 1700
+Wire Wire Line
+	6150 1700 6150 2000
+Text HLabel 6500 1700 2    50   Input ~ 0
+DGnd
+Wire Wire Line
+	5350 2450 4050 2450
+Connection ~ 5350 2450
+Wire Wire Line
+	5550 2000 5250 2000
+Connection ~ 5250 2000
+Wire Wire Line
+	5250 2000 5250 1500
+Text HLabel 3750 2000 0    50   Input ~ 0
++5V_D
+Text HLabel 3750 2450 0    50   Input ~ 0
++5V_A
+Wire Wire Line
+	5250 5750 5250 5900
+Wire Wire Line
+	5000 5750 5000 5900
+Text HLabel 5250 5900 3    50   Input ~ 0
+DGnd
+Text HLabel 5000 5900 3    50   Input ~ 0
+AGnd
+Wire Wire Line
+	4050 2450 4050 1900
+Connection ~ 4050 2450
+Wire Wire Line
+	4050 2450 3750 2450
+NoConn ~ 5850 3050
+NoConn ~ 5850 3150
+NoConn ~ 5850 3250
+NoConn ~ 5850 3650
+NoConn ~ 5850 3750
+Wire Wire Line
+	6950 3650 7100 3650
+Wire Wire Line
+	6950 3450 7100 3450
+NoConn ~ 5850 4050
+NoConn ~ 5850 4150
+NoConn ~ 5850 4250
+NoConn ~ 5850 4350
+NoConn ~ 5850 4450
+NoConn ~ 5850 4950
+NoConn ~ 5850 5050
+NoConn ~ 5850 5150
+NoConn ~ 5850 5250
+NoConn ~ 5850 5350
+NoConn ~ 5850 5450
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5DBB3D00
+P 4500 1900
+F 0 "#FLG0104" H 4500 1975 50  0001 C CNN
+F 1 "PWR_FLAG" H 4500 2073 50  0000 C CNN
+F 2 "" H 4500 1900 50  0001 C CNN
+F 3 "~" H 4500 1900 50  0001 C CNN
+	1    4500 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5DBB410F
+P 4050 1900
+F 0 "#FLG0105" H 4050 1975 50  0001 C CNN
+F 1 "PWR_FLAG" H 4050 2073 50  0000 C CNN
+F 2 "" H 4050 1900 50  0001 C CNN
+F 3 "~" H 4050 1900 50  0001 C CNN
+	1    4050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2000 4500 2000
+Wire Wire Line
+	4500 1900 4500 2000
+Connection ~ 4500 2000
+Wire Wire Line
+	4500 2000 5250 2000
+$EndSCHEMATC
